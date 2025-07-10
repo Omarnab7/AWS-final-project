@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>הצעת מחיר</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="css/quotation.css" />
+    <link rel="stylesheet" href="css/styles-unified.css" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="https://us-east-2ocgio6s6u.auth.us-east-2.amazoncognito.com/login?client_id=3t99jvjau2sopbs1u7aru99t99&response_type=token&redirect_uri=https%3A%2F%2Ffrontendwebsiteoon1.s3.us-east-2.amazonaws.com%2Findex.html"
+              >התחבר</a
+            >
+          </li>
+          <li><a href="users2.html" id="userAdminButton">משתמשים</a></li>
+          <li><a href="quotation.html">הצעות מחיר</a></li>
+          <li><a href="menus.html">תפריטי אוכל</a></li>
+          <li><a href="halls.html">אולמות אירועים</a></li>
+          <li>
+            <a href="index.html" class="hover:text-blue-600 transition">בית</a>
+          </li>
+          <li><p id="usernameText"></p></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>הצעות מחיר</h1>
+
+      <!-- כפתור להצגת טופס הצעת מחיר -->
+      <button id="getQuotationButton" class="btn btn-primary">
+        קבל הצעת מחיר חדשה
+      </button>
+
+      <!-- טופס הצעת מחיר -->
+      <div id="quotationFormContainer" class="hidden">
+        <form id="quotationForm">
+          <label for="fullName">שם מלא:</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            class="form-control"
+            required
+          />
+
+          <label for="idNumber">תעודת זהות:</label>
+          <input
+            type="text"
+            id="idNumber"
+            name="idNumber"
+            class="form-control"
+            required
+          />
+
+          <label for="eventDate">תאריך האירוע:</label>
+          <input
+            type="date"
+            id="eventDate"
+            name="eventDate"
+            class="form-control"
+            required
+          />
+
+          <label for="eventName">שם האירוע:</label>
+          <input
+            type="text"
+            id="eventName"
+            name="eventName"
+            class="form-control"
+            required
+          />
+
+          <label for="hallSelect">בחר אולם:</label>
+          <select id="hallSelect" class="form-control" required>
+            <option value="">-- בחר אולם --</option>
+          </select>
+
+          <label for="foodSelect">בחר תפריט אוכל:</label>
+          <select id="foodSelect" class="form-control" required>
+            <option value="">-- בחר תפריט אוכל --</option>
+          </select>
+
+          <label for="guestCount">כמות אורחים:</label>
+          <input
+            type="number"
+            id="guestCount"
+            name="guestCount"
+            class="form-control"
+            required
+          />
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block mt-4">
+            חשב הצעת מחיר
+          </button>
+          <button
+            type="button"
+            id="cancelQuotationButton"
+            class="btn btn-secondary btn-lg btn-block mt-2"
+          >
+            בטל
+          </button>
+        </form>
+      </div>
+
+      <!-- Quotation Result -->
+      <div id="quotationResult" class="hidden mt-4">
+        <h2>הצעת מחיר</h2>
+        <p id="quotationDetails"></p>
+        <button id="submitQuotationButton" class="btn btn-success hidden">
+          להוספה לרשימה לחץ כאן
+        </button>
+      </div>
+
+      <!-- Edit Quotation Form -->
+      <div id="editQuotationContainer" class="hidden mt-4">
+        <h2>ערוך הצעת מחיר</h2>
+        <form id="editQuotationForm">
+          <label for="editFullName">שם מלא:</label>
+          <input
+            type="text"
+            id="editFullName"
+            name="editFullName"
+            class="form-control"
+            required
+          />
+
+          <label for="editIdNumber">תעודת זהות:</label>
+          <input
+            type="text"
+            id="editIdNumber"
+            name="editIdNumber"
+            class="form-control"
+            required
+          />
+
+          <label for="editEventDate">תאריך האירוע:</label>
+          <input
+            type="date"
+            id="editEventDate"
+            name="editEventDate"
+            class="form-control"
+            required
+          />
+
+          <label for="editEventName">שם האירוע:</label>
+          <input
+            type="text"
+            id="editEventName"
+            name="editEventName"
+            class="form-control"
+            required
+          />
+
+          <label for="editHallSelect">בחר אולם:</label>
+          <select id="editHallSelect" class="form-control" required>
+            <option value="">-- בחר אולם --</option>
+          </select>
+
+          <label for="editFoodSelect">בחר תפריט אוכל:</label>
+          <select id="editFoodSelect" class="form-control" required>
+            <option value="">-- בחר תפריט אוכל --</option>
+          </select>
+
+          <label for="editGuestCount">כמות אורחים:</label>
+          <input
+            type="number"
+            id="editGuestCount"
+            name="editGuestCount"
+            class="form-control"
+            required
+          />
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block mt-4">
+            עדכן הצעת מחיר
+          </button>
+          <button
+            type="button"
+            id="closeEditButton"
+            class="btn btn-secondary btn-lg btn-block mt-2"
+          >
+            בטל
+          </button>
+        </form>
+      </div>
+
+      <!-- Quotation Display Section -->
+      <div id="quotationDisplay" class="mt-4">
+        <h2>רשימת הצעות מחיר</h2>
+        <table
+          id="quotationTable"
+          class="table table-bordered table-striped hidden"
+        >
+          <thead>
+            <tr>
+              <th>שם מלא</th>
+              <th>תעודת זהות</th>
+              <th>תאריך האירוע</th>
+              <th>שם האירוע</th>
+              <th>אולם</th>
+              <th>תפריט</th>
+              <th>כמות אורחים</th>
+              <th>מחיר כולל</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; פלטפורמת האירועים של ליאור ואוראל &copy;</p>
+    </footer>
+
+    <script src="js/quotation.js" defer></script>
+  </body>
+</html>

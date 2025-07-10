@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>אולמות אירועים</title>
+    <link rel="stylesheet" href="css/styles-unified.css" />
+    <script src="js/halls.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" class="hover:text-blue-600 transition">בית</a>
+          </li>
+
+          <li><a href="halls.html">אולמות אירועים</a></li>
+          <li><a href="menus.html">תפריטי אוכל</a></li>
+          <li><a href="quotation.html">הצעות מחיר</a></li>
+
+          <li><a href="users2.html" id="userAdminButton">משתמשים</a></li>
+          <li>
+            <a
+              href="https://us-east-2ocgio6s6u.auth.us-east-2.amazoncognito.com/login?client_id=3t99jvjau2sopbs1u7aru99t99&response_type=token&redirect_uri=https%3A%2F%2Ffrontendwebsiteoon1.s3.us-east-2.amazonaws.com%2Findex.html"
+              >התחבר</a
+            >
+          </li>
+          <li><p id="usernameText"></p></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>אולמות אירועים</h1>
+      <div class="filters">
+        <h2>סינון:</h2>
+        <div class="filter-item">
+          <label for="nameFilter">שם אולם:</label>
+          <input type="text" id="nameFilter" placeholder="הכנס שם אולם" />
+        </div>
+        <div class="filter-item">
+          <label for="cityFilter">עיר:</label>
+          <select id="cityFilter">
+            <option value="">הכל</option>
+            <option value="חדרה">חדרה</option>
+            <option value="עמק חפר">עמק חפר</option>
+            <option value="קיסריה">קיסריה</option>
+          </select>
+        </div>
+        <div class="filter-item">
+          <label for="capacityFilter">כמות אורחים:</label>
+          <input
+            type="number"
+            id="capacityFilter"
+            placeholder="הכנס את כמות האורחים"
+          />
+        </div>
+        <div class="filter-item">
+          <label for="purposeFilter">סוג האירוע:</label>
+          <select id="purposeFilter">
+            <option value="">כל סוג האירועים</option>
+            <option value="חתונות">חתונות</option>
+            <option value="בר/בת מצווה">בר/בת מצווה</option>
+            <option value="אירועים עסקיים">אירועים עסקיים</option>
+            <option value="כנסים">כנסים</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="addHallButton">הוסף אולם חדש</button>
+
+      <div
+        id="addHallFormContainer"
+        class="add-hall-form"
+        style="display: none"
+      >
+        <h2>הוסף אולם חדש</h2>
+        <form id="addHallForm">
+          <label for="hallName">שם אולם:</label>
+          <input type="text" id="hallName" name="name" required />
+          <label for="hallAddress">כתובת:</label>
+          <input type="text" id="hallAddress" name="address" required />
+          <label for="hallCity">עיר:</label>
+          <input type="text" id="hallCity" name="city" required />
+          <label for="hallCapacity">כמות אורחים מירבית:</label>
+          <input type="number" id="hallCapacity" name="capacity" required />
+          <label for="hallPurpose">ייעוד:</label>
+          <input type="text" id="hallPurpose" name="purpose" required />
+          <label for="hallPricePerGuest">מחיר לאורח:</label>
+          <input
+            type="number"
+            id="hallPricePerGuest"
+            name="pricePerGuest"
+            required
+          />
+          <label for="hallImage1">בחר תמונה 1:</label>
+          <input
+            type="file"
+            id="hallImage1"
+            name="image1"
+            accept="image/*"
+            required
+          />
+          <label for="hallImage2">בחר תמונה 2:</label>
+          <input
+            type="file"
+            id="hallImage2"
+            name="image2"
+            accept="image/*"
+            required
+          />
+          <label for="hallImage3">בחר תמונה 3:</label>
+          <input
+            type="file"
+            id="hallImage3"
+            name="image3"
+            accept="image/*"
+            required
+          />
+          <label for="hallImage4">בחר תמונה 4:</label>
+          <input
+            type="file"
+            id="hallImage4"
+            name="image4"
+            accept="image/*"
+            required
+          />
+          <label for="hallImage5">בחר תמונה 5:</label>
+          <input
+            type="file"
+            id="hallImage5"
+            name="image5"
+            accept="image/*"
+            required
+          />
+          <button type="submit">הוסף אולם</button>
+          <button type="button" id="cancelAdd">בטל</button>
+        </form>
+      </div>
+
+      <!-- שורת עריכה חדשה -->
+      <div id="editRow" class="edit-row" style="display: none">
+        <h2>ערוך אולם</h2>
+        <form id="editHallForm">
+          <input type="hidden" id="editSerialNumber" />
+          <label for="editName">שם אולם:</label>
+          <input type="text" id="editName" required />
+          <label for="editAddress">כתובת:</label>
+          <input type="text" id="editAddress" required />
+          <label for="editCity">עיר:</label>
+          <input type="text" id="editCity" required />
+          <label for="editCapacity">כמות אורחים:</label>
+          <input type="number" id="editCapacity" required />
+          <label for="editPurpose">ייעוד:</label>
+          <input type="text" id="editPurpose" required />
+          <label for="editPricePerGuest">מחיר לאורח:</label>
+          <input type="number" id="editPricePerGuest" required />
+          <button type="submit">שמור שינויים</button>
+          <button type="button" id="cancelEdit">בטל</button>
+        </form>
+      </div>
+
+      <!-- רשימת אולמות -->
+      <div class="gallery" id="hallsContainer">
+        <!-- אולמות יתווספו כאן באמצעות JavaScript -->
+      </div>
+    </main>
+
+    <!-- Modal להצגת גלריית תמונות -->
+    <div id="modal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" />
+      <div id="modalGallery" class="modal-gallery"></div>
+    </div>
+
+    <footer>
+      <p>&copy; פלטפורמת האירועים של ליאור ואוראל &copy;</p>
+    </footer>
+  </body>
+</html>

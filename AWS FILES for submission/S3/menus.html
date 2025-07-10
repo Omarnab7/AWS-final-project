@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>תפריטי אוכל</title>
+    <link rel="stylesheet" href="css/styles-unified.css" />
+    <script src="js/menus.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html" class="hover:text-blue-600 transition">בית</a>
+          </li>
+
+          <li><a href="halls.html">אולמות אירועים</a></li>
+          <li><a href="menus.html">תפריטי אוכל</a></li>
+          <li><a href="quotation.html">הצעות מחיר</a></li>
+
+          <li><a href="users2.html" id="userAdminButton">משתמשים</a></li>
+          <li>
+            <a
+              href="https://us-east-2ocgio6s6u.auth.us-east-2.amazoncognito.com/login?client_id=3t99jvjau2sopbs1u7aru99t99&response_type=token&redirect_uri=https%3A%2F%2Ffrontendwebsiteoon1.s3.us-east-2.amazonaws.com%2Findex.html"
+              >התחבר</a
+            >
+          </li>
+          <li><p id="usernameText"></p></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>תפריטי אוכל</h1>
+
+      <button id="addMenuButton">הוסף תפריט חדש</button>
+
+      <div
+        id="addMenuFormContainer"
+        class="add-menu-form"
+        style="display: none"
+      >
+        <h2>הוסף תפריט חדש</h2>
+        <form id="addMenuForm">
+          <label for="menuName">שם תפריט:</label>
+          <input type="text" id="menuName" name="name" required />
+          <label for="firstCourse">מנה ראשונה:</label>
+          <input type="text" id="firstCourse" name="firstCourse" required />
+          <label for="secondCourse">מנה עיקרית:</label>
+          <input type="text" id="secondCourse" name="secondCourse" required />
+          <label for="dessert">קינוח:</label>
+          <input type="text" id="dessert" name="dessert" required />
+          <label for="pricePerGuest">מחיר לסועד:</label>
+          <input
+            type="number"
+            id="pricePerGuest"
+            name="pricePerGuest"
+            required
+          />
+          <button type="submit">הוסף תפריט</button>
+          <button type="button" id="cancelAddMenu">בטל</button>
+        </form>
+      </div>
+
+      <!-- Edit Menu Modal -->
+      <div id="editMenuModal" class="modal" style="display: none">
+        <div class="modal-content">
+          <h2>ערוך תפריט</h2>
+          <form id="editMenuForm">
+            <input type="hidden" id="editMenuSerialNumber" />
+            <label for="editMenuName">שם תפריט:</label>
+            <input type="text" id="editMenuName" required />
+            <label for="editFirstCourse">מנה ראשונה:</label>
+            <input type="text" id="editFirstCourse" required />
+            <label for="editSecondCourse">מנה עיקרית:</label>
+            <input type="text" id="editSecondCourse" required />
+            <label for="editDessert">קינוח:</label>
+            <input type="text" id="editDessert" required />
+            <label for="editPricePerGuest">מחיר לסועד:</label>
+            <input type="number" id="editPricePerGuest" required />
+            <div class="button-container">
+              <button type="submit">שמור שינויים</button>
+              <button type="button" id="cancelEditMenu">בטל</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="menusContainer" class="menus-list">
+        <!-- תפריטים יתווספו כאן באמצעות JavaScript -->
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; פלטפורמת האירועים של ליאור ואוראל &copy;</p>
+    </footer>
+  </body>
+</html>

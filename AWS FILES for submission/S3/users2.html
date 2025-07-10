@@ -1,0 +1,273 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link rel="stylesheet" href="css/styles-unified.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/users.js"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden"
+      style="font-family: Inter, 'Noto Sans', sans-serif"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3"
+        >
+          <div class="flex items-center gap-4 text-[#111418]">
+            <div class="size-4">
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_6_319)">
+                  <path
+                    d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_319">
+                    <rect width="48" height="48" fill="white"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h2
+              class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]"
+            >
+              Halland
+            </h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="index.html"
+                >בית</a
+              >
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="halls.html"
+                >אולמות אירועים</a
+              >
+
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="menus.html"
+                >תפריטי אוכל</a
+              >
+
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="quotation.html"
+                >הצעות מחיר</a
+              >
+
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="users2.html"
+                >משתמשים</a
+              >
+
+              <a
+                class="text-[#111418] text-sm font-medium leading-normal"
+                href="https://us-east-2ocgio6s6u.auth.us-east-2.amazoncognito.com/login?client_id=3t99jvjau2sopbs1u7aru99t99&response_type=token&redirect_uri=https%3A%2F%2Ffrontendwebsiteoon1.s3.us-east-2.amazonaws.com%2Findex.html"
+                >התחבר</a
+              >
+            </div>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqMjksADjefFperoA3OBjfoIkXXc7l11rA6v0JD-lIDt44FfxT6aIzxSW2pLyX0V3KXJz9nnLcVg-vRPDULooFlsdtDm-Q7XdCdj8hUPxrZ3l_U-dupaHLQpY-KB_z8hV-odcBWM4HHWUcrO9XmYWNqtz5Cjhj_kuckFevZ589wiJBg6oZNTFNvyDL8BIY-2fDruEmsSzGFZ6wNOvGx9pKfK28ue84tiUO3OoibBgg_FZJb3rrmvMkW2AlRlZy0clktIrpOJAssXiw');
+              "
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div
+            class="layout-content-container flex flex-col max-w-[960px] flex-1"
+          >
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <p
+                class="text-[#111418] tracking-light text-[32px] font-bold leading-tight min-w-72"
+              >
+                Users
+              </p>
+            </div>
+            <div class="px-4 py-3 @container">
+              <div
+                class="flex overflow-hidden rounded-lg border border-[#dbe0e6] bg-white"
+              >
+                <table class="flex-1">
+                  <thead>
+                    <tr class="bg-white">
+                      <th
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-120 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal"
+                      >
+                        Username
+                      </th>
+                      <th
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-240 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal"
+                      >
+                        Role
+                      </th>
+                      <th
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-360 px-4 py-3 text-left text-[#111418] w-60 text-[#60758a] text-sm font-medium leading-normal"
+                      ></th>
+                    </tr>
+                  </thead>
+                  <tbody id="userTableBig">
+                    <tr class="border-t border-t-[#dbe0e6]">
+                      <td
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal"
+                      >
+                        alice.smith
+                      </td>
+                      <td
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                      >
+                        Admin
+                      </td>
+                      <td
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-360 h-[72px] px-4 py-2 w-60 text-[#60758a] text-sm font-bold leading-normal tracking-[0.015em]"
+                      >
+                        Delete
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dbe0e6]">
+                      <td
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal"
+                      >
+                        bob.johnson
+                      </td>
+                      <td
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                      >
+                        Editor
+                      </td>
+                      <td
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-360 h-[72px] px-4 py-2 w-60 text-[#60758a] text-sm font-bold leading-normal tracking-[0.015em]"
+                      >
+                        Delete
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dbe0e6]">
+                      <td
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal"
+                      >
+                        charlie.davis
+                      </td>
+                      <td
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                      >
+                        Viewer
+                      </td>
+                      <td
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-360 h-[72px] px-4 py-2 w-60 text-[#60758a] text-sm font-bold leading-normal tracking-[0.015em]"
+                      >
+                        Delete
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dbe0e6]">
+                      <td
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal"
+                      >
+                        diana.evans
+                      </td>
+                      <td
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                      >
+                        Editor
+                      </td>
+                      <td
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-360 h-[72px] px-4 py-2 w-60 text-[#60758a] text-sm font-bold leading-normal tracking-[0.015em]"
+                      >
+                        Delete
+                      </td>
+                    </tr>
+                    <tr class="border-t border-t-[#dbe0e6]">
+                      <td
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-120 h-[72px] px-4 py-2 w-[400px] text-[#111418] text-sm font-normal leading-normal"
+                      >
+                        edward.clark
+                      </td>
+                      <td
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal"
+                      >
+                        Viewer
+                      </td>
+                      <td
+                        class="table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-360 h-[72px] px-4 py-2 w-60 text-[#60758a] text-sm font-bold leading-normal tracking-[0.015em]"
+                      >
+                        Delete
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <style>
+                @container (max-width:120px) {
+                  .table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-120 {
+                    display: none;
+                  }
+                }
+                @container (max-width:240px) {
+                  .table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-240 {
+                    display: none;
+                  }
+                }
+                @container (max-width:360px) {
+                  .table-0da3bf00-9942-4b00-8e26-b8f8c2dc973a-column-360 {
+                    display: none;
+                  }
+                }
+              </style>
+            </div>
+          </div>
+        </div>
+        <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
+            <footer
+              class="flex flex-col gap-6 px-5 py-10 text-center @container"
+            >
+              <div
+                class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around"
+              >
+                <a
+                  class="text-[#60758a] text-base font-normal leading-normal min-w-40"
+                  href="#"
+                  >Terms of Service</a
+                >
+                <a
+                  class="text-[#60758a] text-base font-normal leading-normal min-w-40"
+                  href="#"
+                  >Privacy Policy</a
+                >
+                <a
+                  class="text-[#60758a] text-base font-normal leading-normal min-w-40"
+                  href="#"
+                  >Contact Us</a
+                >
+              </div>
+              <p class="text-[#60758a] text-base font-normal leading-normal">
+                @2024 Acme Co. All rights reserved.
+              </p>
+            </footer>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

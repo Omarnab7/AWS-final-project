@@ -1,0 +1,65 @@
+/* כללי */
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl; /* הגדרת כיוון הטקסט לעברית */
+    text-align: right;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    padding-bottom: 60px; /* הוספת מרווח לתחתית העמוד כדי למנוע חפיפה עם ה-footer */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 1em;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: right; /* יישור הכותרת לימין */
+    margin-top: 0; /* הוספת מרווח למעלה */
+}
+
+footer {
+    text-align: center;
+    padding: 0.5em 0;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
